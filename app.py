@@ -2,11 +2,9 @@ from flask import Flask, request, render_template
 
 app = Flask(_name_)
 
-
 @app.route("/")
-def add():
+def homepage():
     return render_template('palin.html')
-
 
 @app.route("/result", methods=['POST', 'GET'])
 def palindrome():
@@ -22,6 +20,4 @@ def palindrome():
 
         return render_template("result.html", res=res)
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+app.run(debug=True)
