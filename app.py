@@ -9,7 +9,7 @@ def add():
 
 
 @app.route("/result", methods=['POST', 'GET'])
-def calc():
+def palindrome():
     if request.method == 'POST':
         result = request.form
         st = result['pal']
